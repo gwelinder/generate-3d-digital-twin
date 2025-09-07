@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Weaver 3D</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F5F7;
+        }
+        @keyframes scan-effect {
+          0% { transform: translateY(-100%); }
+          100% { transform: translateY(100%); }
+        }
+        @keyframes pixelate-in {
+          0% { filter: blur(0px) brightness(1); }
+          50% { filter: blur(4px) brightness(1.5); }
+          100% { filter: blur(0px) brightness(1); }
+        }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "three": "https://esm.sh/three@0.180.0",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@9.3.0",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@10.7.4",
+    "lucide-react": "https://esm.sh/lucide-react@0.542.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.1.1/client",
+    "react": "https://esm.sh/react@19.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.17.0",
+    "@fal-ai/client": "https://esm.sh/@fal-ai/client@1.6.2",
+    "framer-motion": "https://esm.sh/framer-motion@12.23.12",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "jszip": "https://esm.sh/jszip@3.10.1"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
