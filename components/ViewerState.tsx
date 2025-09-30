@@ -27,8 +27,8 @@ const ViewerLoading: React.FC = () => {
 };
 
 export const ViewerState: React.FC<{ modelUrl: string; generatedViews: IndividualViews; onStartOver: () => void; onReconfigure: () => void }> = ({ modelUrl, generatedViews, onStartOver, onReconfigure }) => {
-    const [ambientIntensity, setAmbientIntensity] = useState(0.5);
-    const [directionalIntensity, setDirectionalIntensity] = useState(2);
+    const [ambientIntensity, setAmbientIntensity] = useState(2);
+    const [directionalIntensity, setDirectionalIntensity] = useState(4);
     const [isDownloading, setIsDownloading] = useState(false);
 
     const handleDownloadPack = async () => {
@@ -62,7 +62,7 @@ export const ViewerState: React.FC<{ modelUrl: string; generatedViews: Individua
                         <Moon className="h-5 w-5 text-gray-600" />
                         <input
                             type="range"
-                            min="0" max="3" step="0.1"
+                            min="3" max="10" step="0.5"
                             value={ambientIntensity}
                             onChange={(e) => setAmbientIntensity(parseFloat(e.target.value))}
                             className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
@@ -73,7 +73,7 @@ export const ViewerState: React.FC<{ modelUrl: string; generatedViews: Individua
                         <Sun className="h-5 w-5 text-gray-600" />
                         <input
                             type="range"
-                            min="0" max="10" step="0.1"
+                            min="5" max="20" step="0.5"
                             value={directionalIntensity}
                             onChange={(e) => setDirectionalIntensity(parseFloat(e.target.value))}
                             className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"

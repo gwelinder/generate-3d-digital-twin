@@ -282,7 +282,7 @@ export default function App() {
     
     return (
         <div className="flex min-h-screen items-center justify-center bg-[#F5F5F7] p-4 sm:p-6 lg:p-8">
-            <main className="w-full max-w-xl">
+            <main className="w-full max-w-2xl">
                  {error && appState !== AppState.GENERATION_FAILED && (
                     <div className="mb-4 rounded-lg bg-red-100 p-4 text-sm text-red-700" role="alert">
                         <span className="font-medium">Error:</span> {error}

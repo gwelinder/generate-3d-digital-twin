@@ -1,5 +1,5 @@
 {
-  "name": "Product Weaver 3D",
+  "name": "SingleShot3D",
   "description": "An AI-powered application to turn a single product photo into a 3D model, featuring a seamless multi-step process from image upload to an interactive 3D viewer.",
   "requestFramePermissions": []
 }
